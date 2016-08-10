@@ -1,0 +1,36 @@
+{
+  "name": "eslint-config-yougov",
+  "version": "0.0.1-pre",
+  "description": "ESLint config for projects written by yougov",
+  "main": "eslint-config-yougov.js",
+  "files": [
+    "eslint-config-yougov.js",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yougov/eslint-config-yougov.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yougov/eslint-config-yougov/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config"
+  ],
+  "author": {
+    "name": "Michał Gołębiowski",
+    "email": "m.goleb@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/yougov/eslint-config-yougov#readme",
+  "devDependencies": {
+    "eslint": "3.2.2",
+    "eslint-find-rules": "1.13.0"
+  },
+  "scripts": {
+    "pretest": "eslint-find-rules -u",
+    "test": "eslint ."
+  }
+}
