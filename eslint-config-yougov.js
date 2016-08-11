@@ -151,7 +151,7 @@ module.exports = {
         'consistent-this': 'off',
         'eol-last': 'error',
         'func-names': 'off',
-        'func-style': ['error', 'expression'],
+        'func-style': 'off',
         'id-length': 'off',
         'id-match': 'off',
         'id-blacklist': ['error', 'arguments', 'event'],
