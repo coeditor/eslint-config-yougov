@@ -226,7 +226,14 @@ module.exports = {
         'space-in-parens': ['error', 'never'],
         'space-infix-ops': 'error',
         'space-unary-ops': 'error',
-        'spaced-comment': ['error', 'always', {markers: ['+', '-', '*', '/', '!']}],
+        'spaced-comment': ['error', 'always', {
+            line: {
+                markers: ['/'],
+            },
+            block: {
+                markers: ['*', '**', '!'],
+            },
+        }],
         'unicode-bom': ['error', 'never'],
         'wrap-regex': 'off',
 
