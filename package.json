@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-yougov",
-  "version": "0.0.13-pre",
+  "version": "0.0.13",
   "description": "ESLint config for projects written by yougov",
   "main": "eslint-config-yougov.js",
   "files": [
