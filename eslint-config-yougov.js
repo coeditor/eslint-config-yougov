@@ -2,7 +2,7 @@
 
 module.exports = {
     parserOptions: {
-        ecmaVersion: 2016,
+        ecmaVersion: 2017,
     },
 
     env: {
@@ -127,7 +127,7 @@ module.exports = {
         yoda: 'error',
 
         // Strict mode
-        strict: ['error', 'global'], // 'global' in Node, 'function' in a browser
+        strict: ['error', 'safe'], // 'global' in Node, 'function' in a browser
 
         // Variables
         'init-declarations': 'off',
