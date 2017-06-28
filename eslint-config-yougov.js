@@ -13,6 +13,7 @@ module.exports = {
         // Rules are divided into sections from http://eslint.org/docs/rules/
 
         // Possible errors
+        'for-direction': 'error',
         'no-await-in-loop': 'error',
         'no-compare-neg-zero': 'error',
         'no-cond-assign': 'error',
@@ -143,10 +144,11 @@ module.exports = {
         'no-unused-vars': ['error', {args: 'all', argsIgnorePattern: '^__'}],
         'no-use-before-define': 'off',
 
-        // Node.js
+        // Node.js and CommonJS
         'callback-return': 'off',
         'global-require': 'off',
         'handle-callback-err': 'error',
+        'no-buffer-constructor': 'error',
         'no-mixed-requires': 'off',
         'no-new-require': 'error',
         'no-path-concat': 'off',
@@ -156,7 +158,9 @@ module.exports = {
         'no-sync': 'off', // In some projects this might be useful
 
         // Stylistic issues
+        'array-bracket-newline': 'off',
         'array-bracket-spacing': ['error', 'never'],
+        'array-element-newline': 'off',
         'block-spacing': ['error', 'never'],
         'brace-style': 'error',
         camelcase: 'off',
@@ -173,7 +177,16 @@ module.exports = {
         'id-length': 'off',
         'id-match': 'off',
         'id-blacklist': ['error', 'arguments', 'event'],
-        indent: ['error', 4, {SwitchCase: 1, MemberExpression: 1}],
+        indent: ['error', 4, {
+            SwitchCase: 1,
+            MemberExpression: 1,
+            FunctionDeclaration: {
+                parameters: 'first',
+            },
+            FunctionExpression: {
+                parameters: 'first',
+            },
+        }],
         'jsx-quotes': 'off',
         'key-spacing': 'error',
         'keyword-spacing': 'error',
@@ -245,11 +258,13 @@ module.exports = {
         'operator-assignment': 'error',
         'operator-linebreak': ['error', 'after'],
         'padded-blocks': 'off',
+        'padding-line-between-statements': 'off',
         'quote-props': ['error', 'as-needed'],
         quotes: ['error', 'single'],
         'require-jsdoc': 'off',
-        'semi-spacing': 'error',
         semi: 'error',
+        'semi-spacing': 'error',
+        'semi-style': 'error',
         'sort-keys': 'off',
         'sort-vars': 'off',
         'sort-imports': 'off', // It sorts by the member syntax, not by module names
@@ -267,6 +282,7 @@ module.exports = {
                 markers: ['*', '**', '!'],
             },
         }],
+        'switch-colon-spacing': 'error',
         'template-tag-spacing': ['error', 'never'],
         'unicode-bom': ['error', 'never'],
         'wrap-regex': 'off',
