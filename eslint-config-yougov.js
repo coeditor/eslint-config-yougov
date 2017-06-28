@@ -194,7 +194,6 @@ module.exports = {
         // Re-enable when commented out lines & ESLint pragmas work; was:
         // [2, {beforeBlockComment: true, beforeLineComment: true, allowBlockStart: true}],
         'lines-around-comment': 'off',
-        'lines-around-directive': ['error', 'always'],
         'linebreak-style': 'off',
         'max-depth': 'off',
         'max-len': ['error', 120, 4, {ignoreUrls: true, ignoreRegExpLiterals: true}],
@@ -206,8 +205,6 @@ module.exports = {
         'multiline-ternary': 'off',
         'new-cap': 'off',
         'new-parens': 'error',
-        'newline-after-var': 'off',
-        'newline-before-return': 'off',
         'newline-per-chained-call': ['error', {ignoreChainWithDepth: 4}],
         'no-array-constructor': 'error',
         'no-bitwise': 'error',
@@ -258,7 +255,10 @@ module.exports = {
         'operator-assignment': 'error',
         'operator-linebreak': ['error', 'after'],
         'padded-blocks': 'off',
-        'padding-line-between-statements': 'off',
+        'padding-line-between-statements': ['error',
+            {blankLine: 'always', prev: 'directive', next: '*'},
+            {blankLine: 'always', prev: 'import', next: ['const', 'let', 'class', 'block-like']},
+        ],
         'quote-props': ['error', 'as-needed'],
         quotes: ['error', 'single'],
         'require-jsdoc': 'off',
@@ -317,11 +317,5 @@ module.exports = {
         'require-yield': 'off',
         'template-curly-spacing': ['error', 'always'],
         'yield-star-spacing': ['error', 'after'],
-
-        // Deprecated
-        'no-native-reassign': 'off',
-        'no-negated-in-lhs': 'off',
-        'no-spaced-func': 'off',
-        'prefer-reflect': 'off',
     },
 };
