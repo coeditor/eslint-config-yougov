@@ -9,10 +9,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/coeditor/eslint-config-yougov.git"
+    "url": "git@gitlab.yougov.net:online/opigram/eslint-config-yougov.git"
   },
   "bugs": {
-    "url": "https://github.com/coeditor/eslint-config-yougov/issues"
+    "url": "https://gitlab.yougov.net/online/opigram/eslint-config-yougov/issues"
   },
   "keywords": [
     "eslint",
@@ -24,7 +24,7 @@
     "email": "m.goleb@gmail.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/coeditor/eslint-config-yougov#readme",
+  "homepage": "https://gitlab.yougov.net/online/opigram/eslint-config-yougov",
   "devDependencies": {
     "eslint": "4.4.1",
     "eslint-find-rules": "3.1.1"
